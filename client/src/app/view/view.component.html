@@ -1,0 +1,101 @@
+<!-- <div class="row">
+<input type="text" placeholder="Take a note...">
+<i class="fas fa-image"></i>
+
+</div>
+ -->
+
+
+ <!-- <div class="add-note">
+        <div
+          *ngIf="!isAddingNewNote"
+          class="add-note__placeholder"
+        >
+          Create new note...
+        </div>
+      
+        <div
+          [ngClass]="addNoteClass"
+          *ngIf="isAddingNewNote"
+          class="add-note__form-wrapper"
+        >
+      
+          <input
+            [(ngModel)]="title"
+            class="add-note__form-field add-note__title"
+            placeholder="Title"
+          />
+      
+          <textarea
+            #textbox
+            placeholder="Create new note..."
+            class="add-note__form-field add-note__note"
+            [(ngModel)]="post"
+            (keyup)="adjustTextarea($event)"
+          ></textarea>
+      
+           <selected-tags-bar
+            [selectedTags]="selectedTags"
+          ></selected-tags-bar>
+    
+          <div class="add-note__footer">
+            <icons-bar
+              [currentColor]="currentColor"
+              [reminder]="reminder"
+              [selectedTags]="selectedTags"
+              [isTagSelected]="isTagSelected"
+              (onColorSelect)="setColor($event, color)"
+              (onReminderSelect)="setReminder($event, reminder)"
+              (onTagSelect)="handleTagSelection($event, tag)"
+            ></icons-bar>
+      
+            <button
+              (click)="addNewNote()"
+              [disabled]="!post"
+              mat-raised-button
+            >
+              Add
+            </button>
+          </div>
+      
+          <reminder-bar
+            *ngIf="reminder"
+            [reminder]="reminder"
+            (onDeleteClick)="removeReminder($event)"
+          ></reminder-bar>
+      
+        </div>
+      </div> -->
+
+
+
+
+      <div class="add-note-container" fxLayout="row" fxFlex.md="50" fxLayoutAlign="left center">
+            <button *ngIf="!show" (click)="show = !show" mat-raised-button color="primary">
+              <i class="fa fa-plus"></i> Add Note
+            </button>
+            <mat-card class="mat-card mat-elevation-z20" *ngIf="show">
+              <mat-card-content>
+                <form class="add-note" [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+                        <i class="fa fa-pushpin"></i>
+
+                  <input type="text" placeholder="title" formControlName="title" required placeholder="Title" /> <br />
+                  <textarea
+                    type="text"
+                    formControlName="body"
+                    required
+                    placeholder="Take a note..."
+                  ></textarea>
+                  <br />
+                  <button type="submit" [disabled]="!noteForm.valid" mat-raised-button color="primary">
+                     <!-- name="save"></fa> Save --><i class="fa fa-save">Save</i>
+                  </button>
+                  <div class="add-note-close">
+                        <button mat-raised-button color="warn" (click)="show = !show">
+                            <i class="fa fa-close">Close</i>
+                        </button>
+                      </div>
+                </form>
+              </mat-card-content>
+            </mat-card>
+          </div>
