@@ -8,6 +8,7 @@ add-note-container {
   .add-note {
     min-width: 350px;
     padding: 5px;
+
   }
   
   .add-note-close {
@@ -25,6 +26,7 @@ add-note-container {
     width: 330px;
     margin: 8px;
     padding: 8px;
+    position: relative;
   }
   .add-note textarea {
     font-size: 14px;
@@ -34,3 +36,23 @@ add-note-container {
   .add-note button {
     float: left;
   }
+
+.add-note .fa-image{
+    position: relative;
+    top: -20px;
+    left: -200px;
+}
+.add-note .fa-palette{
+    position: relative;
+    top: -20px;
+    left: -300px;
+}
+.add-note .fa-tags{
+    position: relative;
+    top: -20px;
+    left: -270px;
+}
+.add-note .fa-thumbtrack{
+    position: relative;
+    right: 200px;
+}
