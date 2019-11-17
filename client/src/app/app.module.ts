@@ -13,15 +13,18 @@ import {
   MatButtonModule,
   MatCardModule,
   MatInputModule,
+  MatMenuModule
   
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewnoteComponent } from './components/viewnote/viewnote.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewComponent,
+    ViewnoteComponent,
 
   ],
   imports: [
@@ -32,6 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatButtonModule,
   MatCardModule,
+  MatMenuModule,
+  MatIconModule,
     
     MatInputModule,
   

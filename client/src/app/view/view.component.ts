@@ -43,9 +43,7 @@ export class ViewComponent implements OnInit {
       title:this.noteForm.value['title'],
       post:this.noteForm.value['body']
     }
-  this.noteService.createNote(toFormData(data)).subscribe(response=>{
-    console.log(response);
-  })
+  this.noteService.createNote(toFormData(data));
     console.warn(this.noteForm.value);
 
     this.addNote(this.noteForm.value['title'], this.noteForm.value['body']);

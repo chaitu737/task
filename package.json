@@ -1,0 +1,19 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitu737/task.git"
+  },
+  "author": "santhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaitu737/task/issues"
+  },
+  "homepage": "https://github.com/chaitu737/task#readme"
+}
